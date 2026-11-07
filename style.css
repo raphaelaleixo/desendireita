@@ -98,6 +98,7 @@ main { flex: 1; }
 .rodape { margin-top: 56px; padding-top: 12px; border-top: 2px solid var(--ink); display: flex; flex-direction: column; gap: 6px; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); }
 .rodape a { font-weight: 700; }
 .rodape p { margin: 0; }
+.rodape .aberto { flex-basis: 100%; }
 
 /* Modal */
 dialog.modal {
