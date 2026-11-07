@@ -56,7 +56,7 @@
   function buildPrompt(link, promptUrl) {
     return 'Leia a matéria em ' + link +
       ' e reescreva-a seguindo as diretrizes que eu escrevi em ' + (promptUrl || PROMPT_URL) +
-      '. Se não conseguir abrir algum dos links, me avise e peça que eu cole o texto aqui. Não invente o conteúdo.';
+      '. Se não conseguir abrir algum dos links, tente de novo antes de desistir. Se continuar sem conseguir, me avise e peça que eu cole o texto aqui. Não invente o conteúdo.';
   }
 
   function buildChatUrl(chat, prompt) {

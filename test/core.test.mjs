@@ -65,7 +65,7 @@ test('linkFromQuery devolve vazio sem ?link= e não quebra com %', () => {
 test('buildPrompt monta o texto exato', () => {
   assert.equal(buildPrompt('https://exemplo.com/a', 'https://site.com/prompt-v6.txt'),
     'Leia a matéria em https://exemplo.com/a e reescreva-a seguindo as diretrizes que eu escrevi em https://site.com/prompt-v6.txt. ' +
-    'Se não conseguir abrir algum dos links, me avise e peça que eu cole o texto aqui. Não invente o conteúdo.');
+    'Se não conseguir abrir algum dos links, tente de novo antes de desistir. Se continuar sem conseguir, me avise e peça que eu cole o texto aqui. Não invente o conteúdo.');
 });
 
 test('buildPrompt usa PROMPT_URL por padrão', () => {
