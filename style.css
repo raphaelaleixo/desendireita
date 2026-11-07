@@ -65,14 +65,14 @@ main { flex: 1; }
 .masthead h1, .masthead .brand { margin: 0; font-size: 52px; font-weight: 800; line-height: 1; letter-spacing: -.035em; }
 .masthead .brand { color: var(--ink); text-decoration: none; display: block; }
 .masthead .brand:hover { color: var(--ink); }
-.slogan { align-self: stretch; margin-top: 12px; padding: 7px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: .04em; }
+.slogan { align-self: stretch; margin-top: 12px; padding: 7px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: .04em; }
 
 /* Formulário */
 .form { padding-top: 56px; display: flex; flex-direction: column; gap: 14px; }
 .form label { font-size: 34px; font-weight: 600; line-height: 1.08; letter-spacing: -.015em; }
 .row { margin-top: 8px; display: flex; flex-direction: column; gap: 14px; }
 .row input {
-  height: 56px; min-width: 0; border: 0; border-bottom: 2px solid var(--ink); border-radius: 0;
+  height: 56px; min-width: 0; border: 0; border-bottom: 1px solid var(--ink); border-radius: 0;
   background: var(--field); color: var(--ink); padding: 0 12px; font-family: var(--sans); font-size: 16px;
 }
 .row input::placeholder { color: var(--muted); opacity: 1; }
@@ -83,7 +83,7 @@ main { flex: 1; }
 .apoio { margin: 4px 0 0; font-size: 16px; line-height: 1.45; color: var(--support); }
 
 /* Antes e depois */
-.antes-depois { margin-top: 64px; padding-top: 12px; border-top: 3px double var(--ink); }
+.antes-depois { margin-top: 64px; padding-top: 12px; border-top: 1px solid var(--ink); }
 .section-label { margin: 0 0 18px; font-family: var(--sans); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .pares { display: flex; flex-direction: column; gap: 16px; }
 .par { display: flex; flex-direction: column; gap: 6px; }
@@ -95,7 +95,7 @@ main { flex: 1; }
 .par h2 a { text-decoration: none; }
 
 /* Rodapé */
-.rodape { margin-top: 56px; padding-top: 12px; border-top: 2px solid var(--ink); display: flex; flex-direction: column; gap: 6px; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); }
+.rodape { margin-top: 56px; padding-top: 12px; border-top: 1px solid var(--ink); display: flex; flex-direction: column; gap: 6px; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); }
 .rodape a { font-weight: 700; }
 .rodape p { margin: 0; }
 .rodape .aberto { flex-basis: 100%; }
@@ -104,7 +104,7 @@ main { flex: 1; }
 dialog.modal {
   position: fixed; inset: 0 0 auto 0; margin: 96px auto 0; width: calc(100% - 24px); max-width: none;
   max-height: calc(100vh - 108px); max-height: calc(100dvh - 108px); overflow: auto;
-  padding: 0; border: 0; border-top: 4px solid var(--ink); border-radius: 0;
+  padding: 0; border: 0; border-top: 1px solid var(--ink); border-radius: 0;
   background: var(--paper); color: var(--ink);
 }
 dialog.modal::backdrop { background: var(--scrim); }
@@ -126,7 +126,7 @@ dialog.modal::backdrop { background: var(--scrim); }
 .copiado-msg { margin: 0; font-family: var(--sans); font-size: 14px; font-weight: 700; line-height: 1.4; }
 .copiado-msg:empty { display: none; }
 .pedido summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 700; }
-.pedido pre { margin: 0 0 4px; padding: 12px; background: var(--field); border-left: 3px solid var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); user-select: all; }
+.pedido pre { margin: 0 0 4px; padding: 12px; background: var(--field); border-left: 1px solid var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); user-select: all; }
 .aviso { margin: 4px 0 0; font-size: 14px; line-height: 1.45; font-style: italic; color: var(--support); }
 
 /* Páginas de texto (método e exemplos) */
@@ -138,17 +138,17 @@ dialog.modal::backdrop { background: var(--scrim); }
 .texto p { margin: 0 0 18px; }
 .texto ul, .texto ol { padding-left: 1.3em; margin: 0 0 18px; }
 .texto li { margin-bottom: 8px; }
-.texto blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 3px solid var(--ink); color: var(--support); }
+.texto blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 1px solid var(--ink); color: var(--support); }
 .texto blockquote p { margin-bottom: 0; }
 .texto .jornal { margin-top: 24px; font-size: 14px; }
-.texto .cta { margin-top: 32px; padding-top: 14px; border-top: 3px double var(--ink); font-family: var(--sans); font-size: 15px; }
+.texto .cta { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--ink); font-family: var(--sans); font-size: 15px; }
 .texto .cru { font-family: var(--sans); font-size: 14px; }
 
 @media (min-width: 720px) {
   .wrap { padding: 0 1.25rem 3rem; }
   .masthead { padding-top: 28px; }
   .masthead h1, .masthead .brand { font-size: clamp(52px, 8vw, 96px); line-height: .95; letter-spacing: -.04em; }
-  .slogan { margin-top: 16px; padding: 9px 0; border-top-width: 3px; font-size: 13px; }
+  .slogan { margin-top: 16px; padding: 9px 0; font-size: 13px; }
   .form { max-width: 720px; width: 100%; margin: 0 auto; padding-top: 72px; gap: 16px; }
   .form label { font-size: clamp(34px, 4.5vw, 52px); line-height: 1.04; letter-spacing: -.02em; }
   .row { flex-direction: row; flex-wrap: wrap; gap: 12px; }

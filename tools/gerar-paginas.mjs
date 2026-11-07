@@ -59,7 +59,7 @@ function pagina({ titulo, descricao, base, corpo }) {
 <div class="wrap">
   <header class="masthead">
     <a class="brand" href="${base || './'}index.html">Desendireita</a>
-    <div class="slogan">Economia sem indireta.</div>
+    <div class="slogan">Jornalismo nunca é imparcial. Veja a notícia por outro lado.</div>
   </header>
   <main class="texto">
     <a class="voltar" href="${base}index.html">← Voltar ao início</a>
