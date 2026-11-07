@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Desendireita — Economia sem indireta</title>
+<meta name="description" content="Cole o link de uma notícia de economia e veja a matéria por outro viés, reescrita pela IA que você já usa.">
+<link rel="preload" href="fonts/newsreader-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <h1>Desendireita</h1>
+    <div class="slogan">Economia sem indireta.</div>
+  </header>
+
+  <main>
+    <form class="form" id="form" novalidate>
+      <label for="link">Cole o link e veja a notícia de economia por outro viés</label>
+      <div class="row">
+        <input id="link" name="link" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://…" aria-describedby="erro">
+        <button class="btn" id="continuar" type="submit">Continuar</button>
+      </div>
+      <p class="erro" id="erro" aria-live="polite"></p>
+      <p class="apoio">Depois é só escolher o chat de IA que você já usa. Ele reescreve a matéria como uma coluna de opinião: sem economês e sem esconder o próprio viés.</p>
+    </form>
+
+    <section class="antes-depois" aria-labelledby="antes-depois">
+      <p class="section-label" id="antes-depois">Antes e depois</p>
+      <div class="pares">
+        <article class="par">
+          <p class="jornal"><b>O jornal disse: </b><span class="riscada">Proposta sobre ‘canetada’ na Selic derruba o Ibovespa ao menor nível desde janeiro</span></p>
+          <h2><a href="exemplos/mercado-ansiedade.html">O mercado teve uma crise de ansiedade por causa de uma reunião que não existiu</a></h2>
+        </article>
+        <article class="par">
+          <p class="jornal"><b>O jornal disse: </b><span class="riscada">Lula e política econômica: aliados pedem defesa do equilíbrio fiscal</span></p>
+          <h2><a href="exemplos/lula-investidores.html">Lula precisa acalmar os investidores. E os outros 200 milhões?</a></h2>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <a href="metodo.html">Método aberto: prompt.md</a>
+    <p>O texto é gerado pela IA de cada pessoa e deve ser conferido.</p>
+  </footer>
+</div>
+
+<dialog class="modal" id="modal" aria-labelledby="modal-titulo">
+  <div class="modal-box">
+    <div class="modal-top">
+      <h2 id="modal-titulo">Escolha onde abrir</h2>
+      <button class="fechar" id="fechar" type="button" aria-label="Fechar"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"/></svg></button>
+    </div>
+    <div class="chat-list" id="chats"></div>
+    <p class="copiado-msg" id="copiado" aria-live="polite"></p>
+    <details class="pedido">
+      <summary>Ver o pedido que será enviado</summary>
+      <pre id="pedido"></pre>
+    </details>
+    <p class="aviso">Alguns chats mostram um alerta de segurança antes de enviar. Isso é normal: o pedido é curto, leia antes de mandar. Em alguns, ele é enviado sozinho ao abrir.</p>
+  </div>
+</dialog>
+
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

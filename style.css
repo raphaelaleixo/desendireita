@@ -1,0 +1,174 @@
+/* Desendireita — ver design/DESIGN.md */
+
+@font-face { font-family: Newsreader; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/newsreader-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Newsreader; font-style: italic; font-weight: 400; font-display: swap; src: url(fonts/newsreader-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: Newsreader; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/newsreader-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Newsreader; font-style: normal; font-weight: 800; font-display: swap; src: url(fonts/newsreader-latin-800-normal.woff2) format("woff2"); }
+@font-face { font-family: "Libre Franklin"; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/libre-franklin-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: "Libre Franklin"; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/libre-franklin-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Libre Franklin"; font-style: normal; font-weight: 800; font-display: swap; src: url(fonts/libre-franklin-latin-800-normal.woff2) format("woff2"); }
+
+:root {
+  color-scheme: light dark;
+  --paper: #FAF8F3;
+  --ink: #121212;
+  --field: #FFFFFF;
+  --support: #33302C;
+  --muted: #4D4A45;
+  --rule: #CFC9BD;
+  --accent: #A3121C;
+  --btn-bg: #121212;
+  --btn-fg: #FAF8F3;
+  --scrim: rgba(18, 18, 18, .6);
+  --serif: Newsreader, Georgia, "Times New Roman", serif;
+  --sans: "Libre Franklin", Arial, Helvetica, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141311;
+    --ink: #F2EEE6;
+    --field: #1F1D1A;
+    --support: #D3CCC0;
+    --muted: #B5AEA2;
+    --rule: #3A3631;
+    --accent: #F0726C;
+    --btn-bg: #F2EEE6;
+    --btn-fg: #141311;
+    --scrim: rgba(0, 0, 0, .7);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+}
+body:has(dialog[open]) { overflow: hidden; }
+
+a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.btn:focus-visible { outline-color: var(--accent); }
+
+.wrap { flex: 1; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px 40px; display: flex; flex-direction: column; }
+main { flex: 1; }
+
+/* Cabeçalho */
+.masthead { padding: 18px 0 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.masthead h1, .masthead .brand { margin: 0; font-size: 52px; font-weight: 800; line-height: 1; letter-spacing: -.035em; }
+.masthead .brand { color: var(--ink); text-decoration: none; display: block; }
+.masthead .brand:hover { color: var(--ink); }
+.slogan { align-self: stretch; margin-top: 12px; padding: 7px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: .04em; }
+
+/* Formulário */
+.form { padding-top: 56px; display: flex; flex-direction: column; gap: 14px; }
+.form label { font-size: 34px; font-weight: 600; line-height: 1.08; letter-spacing: -.015em; }
+.row { margin-top: 8px; display: flex; flex-direction: column; gap: 14px; }
+.row input {
+  height: 56px; min-width: 0; border: 0; border-bottom: 2px solid var(--ink); border-radius: 0;
+  background: var(--field); color: var(--ink); padding: 0 12px; font-family: var(--sans); font-size: 16px;
+}
+.row input::placeholder { color: var(--muted); opacity: 1; }
+.row input[aria-invalid="true"] { border-bottom-color: var(--accent); }
+.btn { min-height: 56px; border: 0; border-radius: 0; background: var(--btn-bg); color: var(--btn-fg); font-family: var(--sans); font-size: 17px; font-weight: 700; cursor: pointer; }
+.erro { margin: -6px 0 0; min-height: 0; font-family: var(--sans); font-size: 14px; line-height: 1.4; color: var(--accent); }
+.erro:empty { display: none; }
+.apoio { margin: 4px 0 0; font-size: 16px; line-height: 1.45; color: var(--support); }
+
+/* Antes e depois */
+.antes-depois { margin-top: 64px; padding-top: 12px; border-top: 3px double var(--ink); }
+.section-label { margin: 0 0 18px; font-family: var(--sans); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.pares { display: flex; flex-direction: column; gap: 16px; }
+.par { display: flex; flex-direction: column; gap: 6px; }
+.par + .par { padding-top: 16px; border-top: 1px solid var(--rule); }
+.jornal { margin: 0; font-family: var(--sans); font-size: 13px; line-height: 1.4; color: var(--muted); }
+.jornal b { font-weight: 800; color: var(--ink); }
+.riscada { text-decoration: line-through; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.par h2 { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.12; letter-spacing: -.01em; }
+.par h2 a { text-decoration: none; }
+
+/* Rodapé */
+.rodape { margin-top: 56px; padding-top: 12px; border-top: 2px solid var(--ink); display: flex; flex-direction: column; gap: 6px; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); }
+.rodape a { font-weight: 700; }
+.rodape p { margin: 0; }
+
+/* Modal */
+dialog.modal {
+  position: fixed; inset: 0 0 auto 0; margin: 96px auto 0; width: calc(100% - 24px); max-width: none;
+  max-height: calc(100vh - 108px); max-height: calc(100dvh - 108px); overflow: auto;
+  padding: 0; border: 0; border-top: 4px solid var(--ink); border-radius: 0;
+  background: var(--paper); color: var(--ink);
+}
+dialog.modal::backdrop { background: var(--scrim); }
+.modal-box { padding: 18px 18px 22px; display: flex; flex-direction: column; gap: 12px; }
+.modal-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.modal-top h2 { margin: 0; font-size: 28px; font-weight: 600; line-height: 1.1; letter-spacing: -.015em; }
+.fechar { width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 0; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+.chat-list { display: flex; flex-direction: column; border-top: 1px solid var(--ink); }
+.chat {
+  width: 100%; min-height: 54px; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 0; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; background: transparent;
+  color: var(--ink); text-align: left; text-decoration: none; cursor: pointer;
+  font-family: var(--sans); font-size: 17px; font-weight: 700;
+}
+.chat:hover { color: var(--ink); }
+.chat:hover .tag { color: var(--accent); }
+.chat .tag { font-size: 14px; font-weight: 500; color: var(--muted); white-space: nowrap; }
+.chat-list > :last-child { border-bottom-color: var(--ink); }
+.copiado-msg { margin: 0; font-family: var(--sans); font-size: 14px; font-weight: 700; line-height: 1.4; }
+.copiado-msg:empty { display: none; }
+.pedido summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 700; }
+.pedido pre { margin: 0 0 4px; padding: 12px; background: var(--field); border-left: 3px solid var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--support); user-select: all; }
+.aviso { margin: 4px 0 0; font-size: 14px; line-height: 1.45; font-style: italic; color: var(--support); }
+
+/* Páginas de texto (método e exemplos) */
+.texto { max-width: 720px; width: 100%; margin: 48px auto 0; }
+.texto .voltar { font-family: var(--sans); font-size: 14px; font-weight: 700; }
+.texto h1 { margin: 24px 0 16px; font-size: 36px; font-weight: 800; line-height: 1.05; letter-spacing: -.025em; }
+.texto h2 { margin: 36px 0 12px; font-size: 26px; font-weight: 600; line-height: 1.15; letter-spacing: -.015em; }
+.texto p, .texto li { font-size: 18px; line-height: 1.6; }
+.texto p { margin: 0 0 18px; }
+.texto ul, .texto ol { padding-left: 1.3em; margin: 0 0 18px; }
+.texto li { margin-bottom: 8px; }
+.texto blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 3px solid var(--ink); color: var(--support); }
+.texto blockquote p { margin-bottom: 0; }
+.texto .jornal { margin-top: 24px; font-size: 14px; }
+.texto .cta { margin-top: 32px; padding-top: 14px; border-top: 3px double var(--ink); font-family: var(--sans); font-size: 15px; }
+.texto .cru { font-family: var(--sans); font-size: 14px; }
+
+@media (min-width: 720px) {
+  .wrap { padding: 0 1.25rem 3rem; }
+  .masthead { padding-top: 28px; }
+  .masthead h1, .masthead .brand { font-size: clamp(52px, 8vw, 96px); line-height: .95; letter-spacing: -.04em; }
+  .slogan { margin-top: 16px; padding: 9px 0; border-top-width: 3px; font-size: 13px; }
+  .form { max-width: 720px; width: 100%; margin: 0 auto; padding-top: 72px; gap: 16px; }
+  .form label { font-size: clamp(34px, 4.5vw, 52px); line-height: 1.04; letter-spacing: -.02em; }
+  .row { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .row input { flex: 999 1 380px; height: 60px; padding: 0 16px; font-size: 18px; }
+  .btn { flex: 1 1 160px; min-height: 60px; }
+  .apoio { font-size: 18px; line-height: 1.5; }
+  .antes-depois { margin-top: 88px; padding-top: 14px; }
+  .section-label { font-size: 13px; margin-bottom: 20px; }
+  .pares { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px 48px; }
+  .par { gap: 8px; }
+  .par + .par { padding-top: 0; border-top: 0; }
+  .jornal { font-size: 14px; }
+  .par h2 { font-size: 30px; line-height: 1.08; letter-spacing: -.015em; }
+  .rodape { margin-top: 72px; padding-top: 14px; flex-direction: row; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; font-size: 14px; }
+  dialog.modal { margin-top: 120px; max-width: 600px; max-height: calc(100vh - 140px); max-height: calc(100dvh - 140px); }
+  .modal-box { padding: 24px 28px 28px; gap: 14px; }
+  .modal-top h2 { font-size: 36px; line-height: 1.05; letter-spacing: -.02em; }
+  .chat-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); column-gap: 28px; }
+  .chat-list > :last-child { border-bottom-color: var(--rule); }
+  .aviso { font-size: 15px; line-height: 1.5; }
+  .texto h1 { font-size: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
