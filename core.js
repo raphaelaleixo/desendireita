@@ -7,7 +7,7 @@
   'use strict';
 
   // Troque pelo endereço real do prompt quando o domínio existir.
-  var PROMPT_URL = 'https://raphaelaleixo.github.io/desendireita/prompt-v6.txt';
+  var PROMPT_URL = 'https://desendireita.com.br/prompt-v6.txt';
 
   // Formatos de endereço não oficiais: podem mudar. Tudo fica aqui.
   // mode "open": abre o chat com o prompt preenchido.
