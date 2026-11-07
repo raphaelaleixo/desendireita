@@ -22,7 +22,7 @@ Cobrem a validação do link (incluindo acentos, espaços e caracteres especiais
 
 ## O que mexer
 
-- **Domínio:** troque `PROMPT_URL` em `core.js` pelo endereço público do `prompt-v6.md`. Enquanto estiver o endereço de exemplo, o chat não conseguirá ler as diretrizes.
+- **Domínio:** o `PROMPT_URL`, em `core.js`, aponta para `https://raphaelaleixo.github.io/desendireita/prompt-v6.md`. Quando houver domínio próprio, troque ali. Se o endereço não abrir, o chat não consegue ler as diretrizes.
 - **Chats:** o objeto `CHATS`, também em `core.js`. Os formatos de endereço (`?q=` etc.) não são oficiais e podem mudar; ajuste só ali.
 - **Prompt (diretrizes):** `prompt-v6.md` é servido como texto puro. `metodo.html` mostra o mesmo conteúdo formatado.
 - **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.md` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
@@ -35,7 +35,7 @@ node tools/gerar-paginas.mjs
 
 Basta servir a pasta como arquivos estáticos (Vercel, Netlify, GitHub Pages, Cloudflare Pages, qualquer servidor). Não há etapa de build. Publique `index.html`, `style.css`, `core.js`, `app.js`, `prompt-v6.md`, `metodo.html`, `exemplos/*.html` e `fonts/`. As pastas `design/`, `test/` e `tools/` e os arquivos `.md` de trabalho não precisam subir.
 
-Depois de publicar, confira que `https://SEU-DOMINIO/prompt-v6.md` abre como texto puro e que o `PROMPT_URL` aponta para ele.
+Depois de publicar, confira que o endereço do `PROMPT_URL` abre o `prompt-v6.md` como texto puro.
 
 ## Fontes
 

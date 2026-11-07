@@ -89,10 +89,9 @@ test('mensagens do DESIGN.md', () => {
   assert.equal(MESSAGES.copied, 'Prompt copiado. Cole na caixa de mensagem do chat.');
 });
 
-test('prompt-v6.md: sem a primeira linha de link e igual ao prompt.md a partir do título', () => {
-  const v3 = readFileSync(new URL('../prompt-v6.md', import.meta.url), 'utf8');
-  const original = readFileSync(new URL('../prompt.md', import.meta.url), 'utf8');
-  assert.ok(v3.startsWith('# Diretrizes de tradução'));
-  assert.equal(v3, original.split('\n').slice(2).join('\n'));
-  assert.doesNotMatch(v3, /g1\.globo\.com/);
+test('prompt-v6.md começa no título e não traz link de matéria fixo', () => {
+  const v6 = readFileSync(new URL('../prompt-v6.md', import.meta.url), 'utf8');
+  assert.ok(v6.startsWith('# Diretrizes de tradução'));
+  assert.doesNotMatch(v6, /g1\.globo\.com/);
+  assert.doesNotMatch(v6, /^Leia a matéria em /m);
 });

@@ -1,0 +1,35 @@
+Manchete original: Lula e política econômica: aliados pedem defesa do equilíbrio fiscal
+
+# Lula precisa acalmar os investidores. E os outros 200 milhões?
+
+A notícia do dia é que aliados de Lula querem que ele venha a público defender o “equilíbrio fiscal”, para acalmar os investidores. Repare na ordem das coisas: um presidente acabou de ser reeleito pelo voto de dezenas de milhões de pessoas, e a primeira tarefa que lhe cobram é mandar uma mensagem tranquilizadora para quem tem dinheiro aplicado. O eleitor deu o mandato. Mas quem precisa de colo é o mercado. É a democracia na versão Faria Lima: cada pessoa tem um voto a cada quatro anos, mas quem tem dinheiro aplicado vota todo dia, no preço do dólar e dos juros.
+
+Para entender a confusão, é preciso voltar alguns dias. Uma coluna do jornal O Globo publicou que Lula *poderia* se reunir com André Lara Resende, um dos economistas que criaram o Plano Real. Lara Resende defende baixar a Selic, a taxa básica de juros do país, de 13,75% para 7,5% ao ano, ao longo de doze meses.
+
+A Selic é a referência para todos os outros juros: do cartão de crédito, do financiamento da casa, do empréstimo da pequena empresa. Ela também define quanto o governo paga a quem empresta dinheiro a ele. Juro alto é ótimo para quem tem dinheiro aplicado e péssimo para quem está devendo.
+
+Bastou a nota sobre uma possível conversa para a bolsa cair e o dólar subir. O ministro da Fazenda, Dario Durigan, negou que o encontro fosse acontecer e garantiu que a política econômica não vai mudar. Aloizio Mercadante, presidente do BNDES e apontado como o intermediário da conversa, também disse que não havia nada marcado. Mesmo assim, a reunião que ninguém marcou continua rendendo manchete. Se fosse novela, já estaria na reprise.
+
+No meio da confusão, a matéria traz uma informação importante que passa meio despercebida. Durigan vai apresentar medidas para cumprir a meta fiscal do ano que vem: um superávit de 0,5% do PIB. Superávit é quando o governo arrecada mais do que gasta, sem contar os juros da dívida. E a ideia é fazer esse ajuste aos poucos, ao longo de quatro anos, justamente para não ter que cortar programas sociais de uma vez.
+
+Traduzindo: o governo está dizendo que vai, sim, arrumar as contas, só que sem passar a motosserra no Bolsa Família. Lula reforçou nas redes que não vai cortar nenhum programa social e que vai cumprir as promessas de campanha.
+
+Para quem vive de pânico, esse plano é sem graça demais. Não gera clique. Mas fica uma pergunta que nem a matéria nem os aliados fazem: por que o ajuste é sempre discutido pelo lado do gasto, e quase nunca pelo lado de quem paga pouco imposto? Cobrar mais dos super-ricos, dos lucros e dividendos e das grandes heranças ajudaria a fechar a conta sem tirar nada de quem precisa. Equilíbrio fiscal também se faz pela receita.
+
+A parte mais interessante da matéria vem no final. Economistas próximos de Lula, sem nome, lembram que os dois primeiros mandatos dele deram certo porque ele fez ajuste fiscal, gerou superávits, os juros caíram e o país cresceu. E que, quando o PT resolveu inventar uma “nova política econômica” no governo Dilma, deu tudo errado: juros a 7,25%, gastos em alta, recessão, desemprego e impeachment.
+
+Repare que o impeachment entra na lista como se fosse mais um indicador econômico, ao lado da inflação e do desemprego. Não era: foi um golpe parlamentar, que derrubou uma presidenta eleita sem crime de responsabilidade. Mas o recado da matéria é outro: quem fala em juros baixos, como Lara Resende, está querendo repetir Dilma. E aqui vale ser honesto, porque um economista de esquerda que não admite erro do próprio lado vira só torcedor.
+
+Sim, a chamada Nova Matriz Econômica, do governo Dilma, teve erros sérios. Mas quais erros? Aqui a história fica mais interessante do que a matéria conta.
+
+Boa parte do rombo daquela época não veio de “gastar demais” com o povo. Veio das desonerações: o governo abriu mão de bilhões em impostos de grandes empresas, esperando que elas investissem e contratassem mais. Elas aumentaram o lucro, guardaram o dinheiro e não investiram. Também houve o congelamento artificial de preços, como o da gasolina e o da conta de luz, que depois explodiu de uma vez. Ou seja, o erro foi dar presente para empresário sem cobrar nada em troca. Não é exatamente o erro que o mercado costuma criticar.
+
+E tem mais. A recessão pesada veio em 2015 e 2016, quando o preço das commodities que o Brasil exporta tinha despencado, a Lava Jato paralisava empreiteiras e a Petrobras, e o governo, já no segundo mandato, fez exatamente o que o mercado pedia: cortou gastos e subiu os juros. A economia, que já estava fraca, afundou de vez. Os economistas brigam até hoje sobre o peso de cada um desses fatores, mas reduzir tudo a “Dilma baixou os juros e deu errado” é como explicar um acidente de carro só pela cor do veículo. E foi essa crise, aprofundada pela própria austeridade, que serviu de pretexto para o golpe de 2016 e para colocar no poder o programa que tinha perdido a eleição de 2014: teto de gastos e reforma trabalhista.
+
+A matéria também conta uma versão bem resumida dos primeiros governos Lula. É verdade que ele fez um ajuste duro em 2003. Os juros chegaram a 26,5% ao ano e o país quase não cresceu naquele ano. O crescimento forte veio depois, e não só por causa do ajuste. Vieram junto o boom das commodities, a valorização do salário mínimo acima da inflação, o Bolsa Família, a expansão do crédito e o investimento público em obras.
+
+E quando a crise mundial de 2008 chegou, o que Lula fez? Aumentou gastos, usou bancos públicos para emprestar e segurou a economia. O Brasil saiu da crise mais rápido do que muitos países ricos. Isso não aparece na “receita” que a matéria descreve.
+
+Os juros, sim, caíram bastante naquela época. Mas mesmo assim continuaram entre os mais altos do mundo, descontada a inflação. O país fez superávit atrás de superávit, e o juro brasileiro seguiu sendo um dos melhores negócios do planeta para quem empresta. A lição dos governos Lula, portanto, não é “faça ajuste e seja feliz”. É que o país cresce quando o dinheiro chega na mão de quem trabalha.
+
+A matéria é sobre política econômica, mas funciona como um aviso: qualquer ideia que fuja do roteiro será tratada como volta ao passado. O governo já apresentou um plano de ajuste gradual que protege os programas sociais. Ainda assim, a cobrança é para que o presidente acalme o mercado, e não para que o mercado aceite que quem ganhou a eleição tem direito de discutir os rumos do país. No fim, a pergunta nunca é se o mercado vai aceitar o governo eleito. É se o governo eleito vai aceitar governar para o mercado.
