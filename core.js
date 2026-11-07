@@ -42,6 +42,17 @@
     return { ok: true, value: value };
   }
 
+  // Lê ?link=... da barra de endereço, para abrir o site com o campo preenchido.
+  // Aceita o link codificado (?link=https%3A%2F%2F...) ou solto (?link=https://...&x=1).
+  // Não valida: o campo só é preenchido, e a validação continua no "Continuar".
+  function linkFromQuery(search) {
+    var m = /^\?link=(.*)$/.exec(String(search == null ? '' : search));
+    if (!m) return '';
+    var raw = m[1];
+    try { raw = decodeURIComponent(raw); } catch (e) { /* mantém o texto cru */ }
+    return raw.trim();
+  }
+
   function buildPrompt(link, promptUrl) {
     return 'Leia a matéria em ' + link +
       ' e reescreva-a seguindo as diretrizes que eu escrevi em ' + (promptUrl || PROMPT_URL) +
@@ -57,6 +68,7 @@
     CHATS: CHATS,
     MESSAGES: MESSAGES,
     validateLink: validateLink,
+    linkFromQuery: linkFromQuery,
     buildPrompt: buildPrompt,
     buildChatUrl: buildChatUrl
   };

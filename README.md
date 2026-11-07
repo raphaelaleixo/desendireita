@@ -20,6 +20,16 @@ node --test test/core.test.mjs
 
 Cobrem a validação do link (incluindo acentos, espaços e caracteres especiais), a montagem do prompt e o endereço de cada chat.
 
+## Abrir com o link preenchido
+
+`?link=` preenche o campo, e a pessoa ainda clica em "Continuar":
+
+```
+https://raphaelaleixo.github.io/desendireita/?link=https://exemplo.com.br/economia/materia
+```
+
+O ideal é codificar o link (`encodeURIComponent`). Solto também funciona, desde que não tenha `#`, porque o navegador separa tudo depois dele da consulta. Um valor inválido só preenche o campo: o erro aparece quando se clica em "Continuar".
+
 ## O que mexer
 
 - **Domínio:** o `PROMPT_URL`, em `core.js`, aponta para `https://raphaelaleixo.github.io/desendireita/prompt-v6.md`. Quando houver domínio próprio, troque ali. Se o endereço não abrir, o chat não consegue ler as diretrizes.

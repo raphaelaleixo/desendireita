@@ -47,6 +47,21 @@ test('validateLink aceita domínio com acento e rejeita quebra de linha no meio'
   assert.equal(validateLink('https://exemplo.com/a\nb').ok, false);
 });
 
+test('linkFromQuery lê o link codificado, solto, com acentos e com & e #', () => {
+  const { linkFromQuery } = core;
+  const alvo = 'https://exemplo.com.br/economia/ação?q=dólar&x=1#t';
+  assert.equal(linkFromQuery('?link=' + encodeURIComponent(alvo)), alvo);
+  assert.equal(linkFromQuery('?link=https://exemplo.com/a?b=1&c=2'), 'https://exemplo.com/a?b=1&c=2');
+  assert.equal(linkFromQuery('?link=https://exemplo.com/a%20b'), 'https://exemplo.com/a b');
+  assert.equal(linkFromQuery('?link=%20https%3A%2F%2Fexemplo.com%20'), 'https://exemplo.com');
+});
+
+test('linkFromQuery devolve vazio sem ?link= e não quebra com %', () => {
+  const { linkFromQuery } = core;
+  for (const s of ['', '?', '?outro=1', '?linkx=1', null, undefined]) assert.equal(linkFromQuery(s), '', String(s));
+  assert.equal(linkFromQuery('?link=https://exemplo.com/100%'), 'https://exemplo.com/100%');
+});
+
 test('buildPrompt monta o texto exato', () => {
   assert.equal(buildPrompt('https://exemplo.com/a', 'https://site.com/prompt-v6.md'),
     'Leia a matéria em https://exemplo.com/a e reescreva-a seguindo as diretrizes que eu escrevi em https://site.com/prompt-v6.md. ' +

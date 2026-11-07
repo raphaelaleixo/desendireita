@@ -102,6 +102,10 @@
 
   input.addEventListener('input', function () { setErro(''); });
 
+  // ?link=... preenche o campo; a pessoa ainda clica em "Continuar".
+  var doQuery = D.linkFromQuery(window.location.search);
+  if (doQuery) input.value = doQuery;
+
   fechar.addEventListener('click', function () { modal.close(); });
 
   // Clique fora: o <dialog> só é alvo do clique quando ele cai no fundo escurecido.
