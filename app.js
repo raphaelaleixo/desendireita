@@ -100,7 +100,17 @@
     abrirModal(r.value);
   });
 
-  input.addEventListener('input', function () { setErro(''); });
+  // A barra de endereço acompanha o campo (?link=...), para copiar e compartilhar.
+  function atualizarUrl() {
+    try {
+      var url = window.location.pathname + D.queryFromLink(input.value);
+      if (url !== window.location.pathname + window.location.search) {
+        window.history.replaceState(null, '', url);
+      }
+    } catch (e) { /* sem history API: o site funciona igual */ }
+  }
+
+  input.addEventListener('input', function () { setErro(''); atualizarUrl(); });
 
   // ?link=... preenche o campo; a pessoa ainda clica em "Continuar".
   var doQuery = D.linkFromQuery(window.location.search);

@@ -53,6 +53,13 @@
     return raw.trim();
   }
 
+  // O inverso de linkFromQuery: a consulta (?link=...) que reproduz o que está no campo.
+  // Codifica o link inteiro, então &, # e acentos sobrevivem. Campo vazio = sem consulta.
+  function queryFromLink(value) {
+    var v = String(value == null ? '' : value).trim();
+    return v ? '?link=' + encodeURIComponent(v) : '';
+  }
+
   function buildPrompt(link, promptUrl) {
     return 'Leia a matéria em ' + link +
       ' e reescreva-a seguindo as diretrizes que eu escrevi em ' + (promptUrl || PROMPT_URL) +
@@ -69,6 +76,7 @@
     MESSAGES: MESSAGES,
     validateLink: validateLink,
     linkFromQuery: linkFromQuery,
+    queryFromLink: queryFromLink,
     buildPrompt: buildPrompt,
     buildChatUrl: buildChatUrl
   };

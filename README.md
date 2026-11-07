@@ -30,6 +30,7 @@ https://desendireita.com.br/?link=https://exemplo.com.br/economia/materia
 
 O ideal é codificar o link (`encodeURIComponent`). Solto também funciona, desde que não tenha `#`, porque o navegador separa tudo depois dele da consulta. Um valor inválido só preenche o campo: o erro aparece quando se clica em "Continuar".
 
+O caminho contrário também existe: enquanto a pessoa digita ou cola o link no campo, a barra de endereço passa a mostrar `?link=...` (codificado, sem criar entradas no histórico). Basta copiar a URL da barra para compartilhar. Se o campo ficar vazio, o `?link=` some.
 ## O que mexer
 
 - **Endereço das diretrizes:** o `PROMPT_URL`, em `core.js`, aponta para `https://raw.githubusercontent.com/raphaelaleixo/desendireita/main/prompt-v6.txt`. Escolhi o `raw` porque o Perplexity não abriu o arquivo no domínio próprio, e o ChatGPT e o Perplexity abrem este. Ele depende do nome do repositório e da branch (`main`): se mudar um dos dois, atualize o `PROMPT_URL`. Se o endereço não abrir, o chat não consegue ler as diretrizes.

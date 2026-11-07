@@ -62,6 +62,22 @@ test('linkFromQuery devolve vazio sem ?link= e não quebra com %', () => {
   assert.equal(linkFromQuery('?link=https://exemplo.com/100%'), 'https://exemplo.com/100%');
 });
 
+test('queryFromLink: vazio some, e linkFromQuery desfaz (acentos, &, #, %)', () => {
+  const { queryFromLink, linkFromQuery } = core;
+  for (const v of ['', '   ', null, undefined]) assert.equal(queryFromLink(v), '', String(v));
+  assert.equal(queryFromLink('  https://exemplo.com/a  '), '?link=https%3A%2F%2Fexemplo.com%2Fa');
+  for (const alvo of [
+    'https://exemplo.com.br/economia/ação?q=dólar&x=1#t',
+    'https://exemplo.com/a%20b?c=100%',
+    'https://exemplo.com/a b',
+    'https://'
+  ]) {
+    const q = queryFromLink(alvo);
+    assert.match(q, /^\?link=[^&#\s]+$/, alvo);   // nada solto que quebre a URL
+    assert.equal(linkFromQuery(q), alvo, alvo);
+  }
+});
+
 test('buildPrompt monta o texto exato', () => {
   assert.equal(buildPrompt('https://exemplo.com/a', 'https://site.com/prompt-v6.txt'),
     'Leia a matéria em https://exemplo.com/a e reescreva-a seguindo as diretrizes que eu escrevi em https://site.com/prompt-v6.txt. ' +
