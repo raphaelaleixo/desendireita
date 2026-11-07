@@ -32,7 +32,7 @@ O ideal é codificar o link (`encodeURIComponent`). Solto também funciona, desd
 
 ## O que mexer
 
-- **Domínio:** o `PROMPT_URL`, em `core.js`, aponta para `https://desendireita.com.br/prompt-v6.txt`. O site está publicado no GitHub Pages com este domínio (arquivo `CNAME`). Se mudar de endereço, troque ali. Se o endereço não abrir, o chat não consegue ler as diretrizes.
+- **Endereço das diretrizes:** o `PROMPT_URL`, em `core.js`, aponta para `https://raw.githubusercontent.com/raphaelaleixo/desendireita/main/prompt-v6.txt`. Escolhi o `raw` porque o Perplexity não abriu o arquivo no domínio próprio, e o ChatGPT e o Perplexity abrem este. Ele depende do nome do repositório e da branch (`main`): se mudar um dos dois, atualize o `PROMPT_URL`. Se o endereço não abrir, o chat não consegue ler as diretrizes.
 - **Chats:** o objeto `CHATS`, também em `core.js`. Os formatos de endereço (`?q=` etc.) não são oficiais e podem mudar; ajuste só ali.
 - **Prompt (diretrizes):** `prompt-v6.txt` é servido como texto puro. `metodo.html` mostra o mesmo conteúdo formatado.
 - **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.txt` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
