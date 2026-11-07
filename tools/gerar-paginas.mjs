@@ -44,7 +44,9 @@ function md(texto, { h1 = true } = {}) {
   return out.join('\n');
 }
 
-function pagina({ titulo, descricao, base, corpo }) {
+const SITE = 'https://desendireita.com.br';
+
+function pagina({ titulo, descricao, base, caminho, corpo }) {
   return `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -53,6 +55,18 @@ function pagina({ titulo, descricao, base, corpo }) {
 <meta name="color-scheme" content="light dark">
 <title>${esc(titulo)} — Desendireita</title>
 <meta name="description" content="${esc(descricao)}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Desendireita">
+<meta property="og:title" content="${esc(titulo)} — Desendireita">
+<meta property="og:description" content="${esc(descricao)}">
+<meta property="og:url" content="${SITE}/${caminho}">
+<meta property="og:image" content="${SITE}/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Desendireita. Jornalismo nunca é imparcial. Veja a notícia por outro lado.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="${base}style.css">
 </head>
 <body>
@@ -82,6 +96,7 @@ writeFileSync(join(raiz, 'metodo.html'), pagina({
   titulo: 'Método aberto',
   descricao: 'O prompt que a Desendireita envia ao chat de IA, na íntegra.',
   base: '',
+  caminho: 'metodo.html',
   corpo: `    <p class="cru">Este é o texto de <a href="prompt-v6.txt">prompt-v6.txt</a>, o arquivo que o chat lê. Aqui ele aparece formatado, sem nenhuma alteração.</p>\n${md(prompt)}`
 }));
 
@@ -101,6 +116,7 @@ for (const ex of exemplos) {
     titulo,
     descricao: `Exemplo: a matéria "${original}" reescrita pela Desendireita.`,
     base: '../',
+    caminho: ex.out,
     corpo: html
   }));
 }

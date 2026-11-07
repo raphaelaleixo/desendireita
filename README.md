@@ -35,7 +35,7 @@ O ideal é codificar o link (`encodeURIComponent`). Solto também funciona, desd
 - **Endereço das diretrizes:** o `PROMPT_URL`, em `core.js`, aponta para `https://raw.githubusercontent.com/raphaelaleixo/desendireita/main/prompt-v6.txt`. Escolhi o `raw` porque o Perplexity não abriu o arquivo no domínio próprio, e o ChatGPT e o Perplexity abrem este. Ele depende do nome do repositório e da branch (`main`): se mudar um dos dois, atualize o `PROMPT_URL`. Se o endereço não abrir, o chat não consegue ler as diretrizes.
 - **Chats:** o objeto `CHATS`, também em `core.js`. Os formatos de endereço (`?q=` etc.) não são oficiais e podem mudar; ajuste só ali.
 - **Prompt (diretrizes):** `prompt-v6.txt` é servido como texto puro. `metodo.html` mostra o mesmo conteúdo formatado.
-- **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.txt` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
+- **Imagem de compartilhamento:** `og.png` (1200×630) é gerada de `tools/og.html` com `node tools/gerar-og.mjs` (precisa do Chrome instalado). Se mudar a tagline, edite o HTML e rode o comando de novo. As tags Open Graph ficam no `<head>` do `index.html` e do `tools/gerar-paginas.mjs`.- **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.txt` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
 
 ```sh
 node tools/gerar-paginas.mjs
