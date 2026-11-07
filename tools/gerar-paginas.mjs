@@ -77,12 +77,12 @@ ${corpo}
 }
 
 // Método
-const prompt = ler('prompt-v6.md');
+const prompt = ler('prompt-v6.txt');
 writeFileSync(join(raiz, 'metodo.html'), pagina({
   titulo: 'Método aberto',
   descricao: 'O prompt que a Desendireita envia ao chat de IA, na íntegra.',
   base: '',
-  corpo: `    <p class="cru">Este é o texto de <a href="prompt-v6.md">prompt-v6.md</a>, o arquivo que o chat lê. Aqui ele aparece formatado, sem nenhuma alteração.</p>\n${md(prompt)}`
+  corpo: `    <p class="cru">Este é o texto de <a href="prompt-v6.txt">prompt-v6.txt</a>, o arquivo que o chat lê. Aqui ele aparece formatado, sem nenhuma alteração.</p>\n${md(prompt)}`
 }));
 
 // Exemplos

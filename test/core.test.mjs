@@ -13,8 +13,8 @@ test('ordem e modo dos chats', () => {
     ['open', 'open', 'open', 'open', 'open', 'copy', 'copy']);
 });
 
-test('PROMPT_URL aponta para prompt-v6.md', () => {
-  assert.match(PROMPT_URL, /^https:\/\/.+\/prompt-v6\.md$/);
+test('PROMPT_URL aponta para prompt-v6.txt', () => {
+  assert.match(PROMPT_URL, /^https:\/\/.+\/prompt-v6\.txt$/);
 });
 
 test('validateLink aceita http e https com domínio', () => {
@@ -63,8 +63,8 @@ test('linkFromQuery devolve vazio sem ?link= e não quebra com %', () => {
 });
 
 test('buildPrompt monta o texto exato', () => {
-  assert.equal(buildPrompt('https://exemplo.com/a', 'https://site.com/prompt-v6.md'),
-    'Leia a matéria em https://exemplo.com/a e reescreva-a seguindo as diretrizes que eu escrevi em https://site.com/prompt-v6.md. ' +
+  assert.equal(buildPrompt('https://exemplo.com/a', 'https://site.com/prompt-v6.txt'),
+    'Leia a matéria em https://exemplo.com/a e reescreva-a seguindo as diretrizes que eu escrevi em https://site.com/prompt-v6.txt. ' +
     'Se não conseguir abrir algum dos links, me avise e peça que eu cole o texto aqui. Não invente o conteúdo.');
 });
 
@@ -104,8 +104,8 @@ test('mensagens do DESIGN.md', () => {
   assert.equal(MESSAGES.copied, 'Prompt copiado. Cole na caixa de mensagem do chat.');
 });
 
-test('prompt-v6.md começa no título e não traz link de matéria fixo', () => {
-  const v6 = readFileSync(new URL('../prompt-v6.md', import.meta.url), 'utf8');
+test('prompt-v6.txt começa no título e não traz link de matéria fixo', () => {
+  const v6 = readFileSync(new URL('../prompt-v6.txt', import.meta.url), 'utf8');
   assert.ok(v6.startsWith('# Diretrizes de tradução'));
   assert.doesNotMatch(v6, /g1\.globo\.com/);
   assert.doesNotMatch(v6, /^Leia a matéria em /m);

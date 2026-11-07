@@ -32,10 +32,10 @@ O ideal é codificar o link (`encodeURIComponent`). Solto também funciona, desd
 
 ## O que mexer
 
-- **Domínio:** o `PROMPT_URL`, em `core.js`, aponta para `https://raphaelaleixo.github.io/desendireita/prompt-v6.md`. Quando houver domínio próprio, troque ali. Se o endereço não abrir, o chat não consegue ler as diretrizes.
+- **Domínio:** o `PROMPT_URL`, em `core.js`, aponta para `https://raphaelaleixo.github.io/desendireita/prompt-v6.txt`. Quando houver domínio próprio, troque ali. Se o endereço não abrir, o chat não consegue ler as diretrizes.
 - **Chats:** o objeto `CHATS`, também em `core.js`. Os formatos de endereço (`?q=` etc.) não são oficiais e podem mudar; ajuste só ali.
-- **Prompt (diretrizes):** `prompt-v6.md` é servido como texto puro. `metodo.html` mostra o mesmo conteúdo formatado.
-- **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.md` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
+- **Prompt (diretrizes):** `prompt-v6.txt` é servido como texto puro. `metodo.html` mostra o mesmo conteúdo formatado.
+- **Páginas geradas:** `metodo.html` e `exemplos/*.html` saem de `prompt-v6.txt` e `exemplos/exemplo-*.md`. Depois de editar esses `.md`, rode:
 
 ```sh
 node tools/gerar-paginas.mjs
@@ -43,9 +43,9 @@ node tools/gerar-paginas.mjs
 
 ## Publicar
 
-Basta servir a pasta como arquivos estáticos (Vercel, Netlify, GitHub Pages, Cloudflare Pages, qualquer servidor). Não há etapa de build. Publique `index.html`, `style.css`, `core.js`, `app.js`, `prompt-v6.md`, `metodo.html`, `exemplos/*.html` e `fonts/`. As pastas `design/`, `test/` e `tools/` e os arquivos `.md` de trabalho não precisam subir.
+Basta servir a pasta como arquivos estáticos (Vercel, Netlify, GitHub Pages, Cloudflare Pages, qualquer servidor). Não há etapa de build. Publique `index.html`, `style.css`, `core.js`, `app.js`, `prompt-v6.txt`, `metodo.html`, `exemplos/*.html` e `fonts/`. As pastas `design/`, `test/` e `tools/` e os arquivos `.md` de trabalho não precisam subir.
 
-Depois de publicar, confira que o endereço do `PROMPT_URL` abre o `prompt-v6.md` como texto puro.
+Depois de publicar, confira que o endereço do `PROMPT_URL` abre o `prompt-v6.txt` como texto puro.
 
 ## Fontes
 
